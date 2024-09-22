@@ -5,13 +5,13 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     const strongLink = ' link-strong'
     const activeLink = 'nav-list_link nav-list_link-active';
-    const passiveLink = 'nav-list_link';
-    return (
+	const passiveLink = 'nav-list_link';
+    return(       
         <nav className="nav">
             <div className="container">
                 <div className="nav-row">
                     <NavLink to="/" className="logo"><strong>Olympiad Games</strong></NavLink>
-                    <AccountBtn />
+                    <AccountBtn/>   
                     <ul className="nav-list">
                         <li className="nav-list_item"><NavLink to="/square" className={({ isActive }) => `${isActive ? activeLink : passiveLink} ${strongLink}`}>Квадрат</NavLink></li>
                         <li className="nav-list_item"><NavLink to="/carousel" className={({ isActive }) => `${isActive ? activeLink : passiveLink} ${strongLink}`}>Карусель</NavLink></li>
