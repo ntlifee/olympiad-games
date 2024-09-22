@@ -10,7 +10,7 @@ const Navbar = () => {
         <nav className="nav">
             <div className="container">
                 <div className="nav-row">
-                    <NavLink to="/" className="logo"><strong>Olympiad Games</strong></NavLink>
+                    <NavLink to="/" className="logo">Mind<strong className='strong_X'>X</strong></NavLink>
                     <AccountBtn/>   
                     <ul className="nav-list">
                         <li className="nav-list_item"><NavLink to="/square" className={({ isActive }) => `${isActive ? activeLink : passiveLink} ${strongLink}`}>Квадрат</NavLink></li>
