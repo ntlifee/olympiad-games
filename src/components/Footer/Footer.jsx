@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="container">
                 <div className="footer_wrapper">
                     <div className="copyright">
-                        <p>© 2024 OlympiadGames</p>
+                        <p>© 2024 MindX</p>
                     </div>
                     <ul className="social">
                         <li className="social_item">
