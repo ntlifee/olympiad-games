@@ -14,13 +14,13 @@ const Footer = () => {
                     </div>
                     <ul className="social">
                         <li className="social_item">
-                            <SocialLink NameImage={gitHub} Link={"https://github.com/ntlifee"} Width={"20px"} />
+                            <SocialLink Alt={'GitHub'} LinkImage={gitHub} Link={"https://github.com/ntlifee"} Width={"20px"} />
                         </li>
                         <li className="social_item">
-                            <SocialLink NameImage={gitHub} Link={"https://github.com/CsharpMaster37"} Width={"20px"} />
+                            <SocialLink Alt={'GitHub'} LinkImage={gitHub} Link={"https://github.com/CsharpMaster37"} Width={"20px"} />
                         </li>
                         <li className="social_item">
-                            <SocialLink NameImage={vk} Link={"https://vk.com/id273271929"} Width={"20px"} />
+                            <SocialLink Alt={'Vk'} LinkImage={vk} Link={"https://vk.com/id273271929"} Width={"20px"} />
                         </li>
                     </ul>
 
