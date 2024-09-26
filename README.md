@@ -2,5 +2,5 @@
 ### `npm start` 
 
 В cd ./server запуск сервера
-### `npm start` 
+### `npm run dev` 
 
