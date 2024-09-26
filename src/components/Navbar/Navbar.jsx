@@ -1,6 +1,7 @@
 import './navbar.css'
 import AccountBtn from '../AccountBtn/AccountBtn'
 import { NavLink } from 'react-router-dom';
+import Logo from './../../components/Logo/Logo'
 
 const Navbar = () => {
     const strongLink = ' link-strong'
@@ -10,7 +11,8 @@ const Navbar = () => {
         <nav className="nav">
             <div className="container">
                 <div className="nav-row">
-                    <NavLink to="/" className="logo">Mind<strong className='strong_X'>X</strong></NavLink>
+                    {/* <NavLink to="/" className="logo">Mind<strong className='strong_X'>X</strong></NavLink> */}
+                    <NavLink to="/" className="logo"><Logo Width='70px' Height='42px'/></NavLink>
                     <AccountBtn/>   
                     <ul className="nav-list">
                         <li className="nav-list_item"><NavLink to="/square" className={({ isActive }) => `${isActive ? activeLink : passiveLink} ${strongLink}`}>Квадрат</NavLink></li>
