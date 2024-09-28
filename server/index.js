@@ -3,6 +3,7 @@ const express = require('express')
 const router = require('./routes/indexRouter.js')
 const cors = require('cors')
 const sequelize = require('./database.js')
+const models = require('./models/index.js')
 
 const PORT = process.env.PORT
 
@@ -16,7 +17,7 @@ const start = async () => {
         await sequelize.authenticate()
         await sequelize.sync()
         app.listen(PORT, () => console.log(`Сервер запущен на ${PORT} порту`))
-    } catch(e){
+    } catch (e) {
         console.log(e)
     }
 }
