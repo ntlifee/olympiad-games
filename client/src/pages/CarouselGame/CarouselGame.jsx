@@ -2,8 +2,9 @@ import './carouselgame.css'
 
 import questionData from './Questions_Carousel.json'
 import InputComponent from '../../components/Input/Input';
-/* 
-import axios from 'axios' */
+import CarouselTable from '../../components/CarouselTable/CarouselTable'
+
+/* import axios from 'axios' */
 import { useEffect, useState } from 'react';
 
 const CarouselGame = () => {
@@ -26,13 +27,12 @@ const CarouselGame = () => {
     const [scores, setScores] = useState([scoreFirstQuestion, ...Array(questions.length - 1).fill(null)]); // первая ячейка с баллом, остальные пустые
 
     useEffect(() => {
-        console.log(idx)
         if (idx !== questions.length) {
             setQuestion(questions[idx].question)
         } else {
             setQuestion('Тест окончен')
         }
-    }, [idx]);
+    }, [idx, questions]);
 
     const handleSubmit = () => {
         if (idx === questions.length) {
@@ -51,36 +51,18 @@ const CarouselGame = () => {
 
         setAnsweredStatus(updatedStatus); // обновляем статус строк
         setScores(updatedScores); // обновляем баллы
-        setValue('')
-        setIdx(idx + 1)
+        setValue('') //сброс поля ввода
+        setIdx(idx + 1) //переход на следующее поле
     };
 
     return (
         <main className="section">
             <div className="container">
                 <div className="carousel-game">
-                    <div className="carousel-wrapper-progress-table">
-                        <table id="carousel-progress-table">
-                            <thead>
-                                <tr>
-                                    <th>№</th>
-                                    <th>Цена</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr className={answeredStatus[0]} key={0}>
-                                    <td>1</td>
-                                    <td>{scoreFirstQuestion}</td>
-                                </tr>
-                                {questions.slice(1).map((_, index) => (
-                                    <tr className={answeredStatus[index + 1]} key={index + 1}>
-                                        <td>{index + 2}</td>
-                                        <td>{scores[index + 1]}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                    <CarouselTable
+                        answeredStatus={answeredStatus}
+                        scores={scores}
+                    />
                     <div className="carousel-wrapper-question">
                         <label className="carousel-label" htmlFor="input-answer">{question}</label>
                         <div className="carousel-form-answer">
