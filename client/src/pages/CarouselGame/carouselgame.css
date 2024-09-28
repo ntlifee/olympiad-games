@@ -4,7 +4,29 @@
     column-gap: 50px;
 }
 
-.carousel-wrapper-score{
+.carousel-wrapper-question{
     display: flex;
     flex-direction: column;
+    row-gap: 10px;   
+    width: 700px;
+    justify-content: center;
+}
+
+.carousel-form-answer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.carousel-label{
+    font-size: 20px;
+    align-self: center;
+}
+
+.carousel-button-form-answer{
+    font-size: 20px;
+}
+
+#input-answer{
+    font-size: 20px;
 }
