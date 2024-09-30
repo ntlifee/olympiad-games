@@ -1,4 +1,5 @@
 import GameInformationPanel from './../../components/GameInformationPanel/GameInformationPanel'
+import QuestionButton from '../../components/QuestionButton/QuestionButton'
 import './squaregame.css'
 
 const SquareGame = (props) => {
@@ -32,14 +33,14 @@ const SquareGame = (props) => {
                                     <td>Тема {theme}</td>
                                     {levels.map(level => (
                                         <td key={level}>
-                                            {/* Компонент элемента управления вопросом */}
+                                            <QuestionButton />
                                         </td>
                                     ))}
                                     <td className="bonus">{(i + 1) * 10} баллов</td>
                                 </tr>
                             ))}
                             <tr>
-                                <td>Бонус</td>
+                                <th>Бонус</th>
                                 {levels.map(level => (<td key={level}>{level * 10} баллов</td>))}
                             </tr>
                         </tbody>
