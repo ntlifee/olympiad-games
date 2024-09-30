@@ -1,16 +1,19 @@
 import './gameinformationpanel.css'
 
-const GameInformationPanel = () => {
-    return ( 
-        <nav className="information_panel">
+const GameInformationPanel = (props) => {
+    const { score, time } = props;
+    return (
+        <div className="information_panel">
             <div className="score">
-                Очки: 261
+                <p className='score_string'>ОЧКИ</p>
+                <p className="score_int">{score ? score : 0}</p>
             </div>
             <div className="time">
-                00:00:00
+                <p className='time_string'>ВРЕМЯ</p>
+                <p className="time_date">{time ? time : '00:00:00'}</p>
             </div>
-        </nav>
-     );
+        </div>
+    );
 }
- 
+
 export default GameInformationPanel;
