@@ -19,6 +19,12 @@ table{
     border-spacing: 5px;
 }
 
+td, th{
+    font-family: 'DM Sans', sans-serif;
+}
+
 td{
-    border-radius: 10px;
+    border-radius: 20px 0 20px 0;
+    position: relative;
+    border: none;
 }

@@ -23,7 +23,7 @@ const SquareGame = (props) => {
                         <thead>
                             <tr>
                                 <th>Тема</th>
-                                {levels.map(level => (<th key={level}>Уровень {level}</th>))}
+                                {levels.map(level => (<td key={level}>Уровень {level}</td>))}
                                 <th>Бонус</th>
                             </tr>
                         </thead>
@@ -36,12 +36,12 @@ const SquareGame = (props) => {
                                             <QuestionButton />
                                         </td>
                                     ))}
-                                    <td className="bonus">{(i + 1) * 10} баллов</td>
+                                    <td className="bonus">+{(i + 1) * 10}</td>
                                 </tr>
                             ))}
                             <tr>
                                 <th>Бонус</th>
-                                {levels.map(level => (<td key={level}>{level * 10} баллов</td>))}
+                                {levels.map(level => (<td key={level}>+{level * 10}</td>))}
                             </tr>
                         </tbody>
                     </table>

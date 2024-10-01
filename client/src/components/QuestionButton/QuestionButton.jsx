@@ -1,8 +1,9 @@
 import './questionButton.css'
 
-const QuestionButton = () => {
+const QuestionButton = (props) => {
+    const { level } = props;
     return (
-        <button className="question-button">Вопрос</button>
+        <a href='#' className='question-button'>{level ? level * 10 : '?'}</a>
     );
 }
 
