@@ -12,19 +12,29 @@ main {
     width: 100%;
     max-width: 1200px;
     align-items: center;
+    padding: 20px;
 }
 
 table{
     border-collapse: separate;
-    border-spacing: 5px;
+    border-spacing: 20px 10px;
 }
 
 td, th{
     font-family: 'DM Sans', sans-serif;
 }
 
+th{
+    font-size: 24px;
+}
+
 td{
     border-radius: 20px 0 20px 0;
     position: relative;
     border: none;
+    font-size: 20px;
+}
+
+.theme{
+    border-bottom: 1px solid black;
 }

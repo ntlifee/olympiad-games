@@ -30,7 +30,7 @@ const SquareGame = (props) => {
                         <tbody>
                             {themes.map((theme, i) => (
                                 <tr key={i}>
-                                    <td>Тема {theme}</td>
+                                    <td className='theme'>Тема {theme}</td>
                                     {levels.map(level => (
                                         <td key={level}>
                                             <QuestionButton />
