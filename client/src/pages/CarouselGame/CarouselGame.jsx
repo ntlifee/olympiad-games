@@ -39,7 +39,7 @@ const CarouselGame = () => {
             setIsAnimating(false)
         }, 500) // Задержка анимации
         if (idx !== questions.length) {
-            setQuestion(questions[idx].question)
+            setQuestion(questions[idx].question) //обновляем текущий вопрос
         } else {
             setQuestion('Тест окончен')
         }
@@ -50,16 +50,13 @@ const CarouselGame = () => {
             return
         }
         setIdx(idx + 1) //переход на следующее поле
+        questions[idx].answer === value ? setIsCorrect(true) : setIsCorrect(false) //обновляем состояние ответа
         setTimeout(() => {
-            if (questions[idx].answer === value)//проверяем ответ
-            {
-                setIsCorrect(true)
-                setScoreCurrent(scoreCurrent + scoreSuccess)
-            }
-            else {
-                setIsCorrect(false)
+            //обновляем текущего балла
+            questions[idx].answer === value ?
+                setScoreCurrent(scoreCurrent + scoreSuccess) :
                 setScoreCurrent(scoreCurrent - scoreFailure < scoreFirstQuestion ? scoreFirstQuestion : scoreCurrent - scoreFailure)
-            }
+            //обновляем предыдущий балл
             setscorePrev(scoreCurrent)
         }, 500)
         setValue('') //сброс поля ввода        
