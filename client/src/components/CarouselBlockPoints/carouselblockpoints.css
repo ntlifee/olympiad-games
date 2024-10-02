@@ -1,0 +1,15 @@
+.correct {
+    background-color: lightgreen; /* Цвет для правильных ответов */
+}
+
+.incorrect {
+    background-color: lightcoral; /* Цвет для неправильных ответов */
+}
+
+.block-point {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}

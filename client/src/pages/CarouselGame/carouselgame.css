@@ -1,7 +1,22 @@
 .carousel-game{
     display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.carousel-wrapper-points{
+    display: flex;
     flex-direction: row;
-    column-gap: 50px;
+    column-gap: 50px;    
+    width: 700px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-next-point{
+    display: flex;
+    flex-direction: column;
 }
 
 .carousel-wrapper-question{
@@ -9,13 +24,7 @@
     flex-direction: column;
     row-gap: 10px;   
     width: 700px;
-    justify-content: center;
-}
-
-.carousel-form-answer{
-    display: flex;
-    flex-direction: column;
-    row-gap: 5px;
+    align-self: center;
 }
 
 .carousel-label{
@@ -23,7 +32,7 @@
     align-self: center;
 }
 
-.carousel-button-form-answer{
+.carousel-button-answer{
     font-size: 20px;
 }
 
