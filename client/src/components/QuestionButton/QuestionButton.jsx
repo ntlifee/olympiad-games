@@ -1,9 +1,9 @@
 import './questionButton.css'
 
 const QuestionButton = (props) => {
-    const { level } = props;
+    const { setModalActive, level } = props;
     return (
-        <a href='#' className='question-button'>{level ? level * 10 : '?'}</a>
+        <a href='#' className='question-button' onClick={() => setModalActive(true)}>{level ? level * 10 : '?'}</a>
     );
 }
 
