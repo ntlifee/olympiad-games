@@ -2,7 +2,7 @@ import { useState } from 'react'
 import GameInformationPanel from './../../components/GameInformationPanel/GameInformationPanel'
 import QuestionButton from '../../components/QuestionButton/QuestionButton'
 import ModalWindow_Square from '../../components/ModalWindow_Square/ModalWindow_Square'
-import './squaregame.css'
+import classes from './squaregame.module.css'
 
 const SquareGame = (props) => {
     let { levels, themes } = props
@@ -20,32 +20,30 @@ const SquareGame = (props) => {
     return (
         <main className="section">
             <div className="container">
-                <div className="wrapper">
+                <div className={classes.wrapper}>
                     <GameInformationPanel />
-                    <table>
+                    <table className={classes.table_square}>
                         <ModalWindow_Square active={modalActive} setActive={setModalActive} />
                         <thead>
-                            <tr>
-                                <th>Тема</th>
-                                {levels.map(level => (<td key={level}>Уровень {level}</td>))}
-                                <th>Бонус</th>
+                            <tr className={classes.tr_square}>
+                                <th className={classes.th_square}>Тема</th>
+                                {levels.map(level => (<td className={classes.td_square} key={level}>Уровень {level}</td>))}
+                                <th className={classes.th_square}>Бонус</th>
                             </tr>
                         </thead>
                         <tbody>
                             {themes.map((theme, i) => (
-                                <tr key={i}>
-                                    <td className='theme'>Тема {theme}</td>
+                                <tr key={i} className={classes.tr_square}>
+                                    <td className={`${classes.theme} ${classes.td_square}`}><span className={classes.theme_text}>Тема {theme} orghsofhe8fhsog8ufsgohysepofyes98fywsfsiwdwadwadufg</span></td>
                                     {levels.map(level => (
-                                        <td key={level}>
-                                            <QuestionButton setModalActive={setModalActive} />
-                                        </td>
+                                        <QuestionButton key={level} setModalActive={setModalActive} />
                                     ))}
-                                    <td className="bonus">+{(i + 1) * 10}</td>
+                                    <td className={`${classes.bonus} ${classes.td_square}`}>+{(i + 1) * 10}</td>
                                 </tr>
                             ))}
-                            <tr>
-                                <th>Бонус</th>
-                                {levels.map(level => (<td key={level}>+{level * 10}</td>))}
+                            <tr className={classes.tr_square}>
+                                <th className={classes.th_square}>Бонус</th>
+                                {levels.map(level => (<td className={classes.td_square} key={level}>+{level * 10}</td>))}
                             </tr>
                         </tbody>
                     </table>

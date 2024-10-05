@@ -1,16 +1,16 @@
-import './gameinformationpanel.css'
+import classes from './gameinformationpanel.module.css'
 
 const GameInformationPanel = (props) => {
     const { score, time } = props;
     return (
-        <div className="information_panel">
-            <div className="score">
-                <p className='score_string'>ОЧКИ</p>
-                <p className="score_int">{score ? score : 0}</p>
+        <div className={classes.information_panel}>
+            <div className={classes.score}>
+                <span className={classes.score_string}>ОЧКИ</span>
+                <span className={classes.score_int}>{score ? score : 0}</span>
             </div>
-            <div className="time">
-                <p className='time_string'>ВРЕМЯ</p>
-                <p className="time_date">{time ? time : '00:00:00'}</p>
+            <div className={classes.time}>
+                <span className={classes.time_string}>ВРЕМЯ</span>
+                <span className={classes.time_date}>{time ? time : '00:00:00'}</span>
             </div>
         </div>
     );

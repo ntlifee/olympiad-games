@@ -10,32 +10,43 @@ main {
     flex-grow: 1;
     flex-direction: column;
     width: 100%;
-    max-width: 1200px;
     align-items: center;
     padding: 20px;
     box-shadow: 10px 0 10px -10px gray inset, -10px 0 10px -10px gray inset;
     position: relative;
 }
 
-table{
+.table_square{
     border-collapse: separate;
-    border-spacing: 20px 10px;
 }
 
-td, th{
+.td_square, .th_square{
     font-family: 'DM Sans', sans-serif;
+    font-size: clamp(4px, 1vw, 16px);
 }
 
-th{
-    font-size: 24px;
-}
-
-td{
+.td_square{
     border-radius: 20px 0 20px 0;
     border: none;
-    font-size: 20px;
 }
 
 .theme{
     border-bottom: 1px solid black;
+    padding: 1%;
+    min-width: 10vw;
+}
+.theme_text{
+    word-break: break-all;
+}
+
+@media (min-width: 769px) {
+    table{
+        border-spacing: 20px 10px;
+    }
+}
+
+@media (max-width:768px) {
+    table{
+        border-spacing: 5px 2.5px;
+    }
 }
