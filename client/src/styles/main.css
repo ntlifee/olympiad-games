@@ -15,9 +15,6 @@ body {
     box-sizing: border-box;
 }
 
-#root {
-	min-height: 100vh;
-}
 
 .App {
 	min-height: 100vh;
@@ -37,4 +34,5 @@ body {
 	padding: 0;
 	max-width: 1200px;
 	width: 100%;
+	position: relative;
 }

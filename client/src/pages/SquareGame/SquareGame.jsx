@@ -1,8 +1,12 @@
+import { useState } from 'react'
 import GameInformationPanel from './../../components/GameInformationPanel/GameInformationPanel'
-import './squaregame.css'
+import QuestionButton from '../../components/QuestionButton/QuestionButton'
+import ModalWindow_Square from '../../components/ModalWindow_Square/ModalWindow_Square'
+import classes from './squaregame.module.css'
 
 const SquareGame = (props) => {
     let { levels, themes } = props
+    const [modalActive, setModalActive] = useState(false)
     //#region development
     levels = [];
     for (let i = 1; i <= 5; i++) {
@@ -16,31 +20,30 @@ const SquareGame = (props) => {
     return (
         <main className="section">
             <div className="container">
-                <div className="wrapper">
+                <div className={classes.wrapper}>
                     <GameInformationPanel />
-                    <table>
+                    <ModalWindow_Square active={modalActive} setActive={setModalActive} />
+                    <table className={classes.table_square}>
                         <thead>
-                            <tr>
-                                <th>Тема</th>
-                                {levels.map(level => (<th key={level}>Уровень {level}</th>))}
-                                <th>Бонус</th>
+                            <tr className={classes.tr_square}>
+                                <th className={classes.th_square}>Тема</th>
+                                {levels.map(level => (<td className={classes.td_square} key={level}>Уровень {level}</td>))}
+                                <th className={classes.th_square}>Бонус</th>
                             </tr>
                         </thead>
                         <tbody>
                             {themes.map((theme, i) => (
-                                <tr key={i}>
-                                    <td>Тема {theme}</td>
+                                <tr key={i} className={classes.tr_square}>
+                                    <td className={`${classes.theme} ${classes.td_square}`}><span className={classes.theme_text}>Тема {theme} orghsofhe8fhsog8ufsgohysepofyes98fywsfsiwdwadwadufg</span></td>
                                     {levels.map(level => (
-                                        <td key={level}>
-                                            {/* Компонент элемента управления вопросом */}
-                                        </td>
+                                        <QuestionButton key={level} setModalActive={setModalActive} />
                                     ))}
-                                    <td className="bonus">{(i + 1) * 10} баллов</td>
+                                    <td className={`${classes.bonus} ${classes.td_square}`}>+{(i + 1) * 10}</td>
                                 </tr>
                             ))}
-                            <tr>
-                                <td>Бонус</td>
-                                {levels.map(level => (<td key={level}>{level * 10} баллов</td>))}
+                            <tr className={classes.tr_square}>
+                                <th className={classes.th_square}>Бонус</th>
+                                {levels.map(level => (<td className={classes.td_square} key={level}>+{level * 10}</td>))}
                             </tr>
                         </tbody>
                     </table>

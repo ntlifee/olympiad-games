@@ -1,11 +1,10 @@
 .information_panel{
     background-color: white;
-    max-width: 400px;
-    width: 100%;
+    width: 30%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 7px;
     margin: 20px;
 }
 
@@ -17,14 +16,14 @@
 }
 
 .score_string, .time_string{
-    font-size: 12px;
+    font-size: clamp(4px, 1.5vw, 16px);
     font-family: 'DM Sans', sans-serif;
     text-align: center;
     color: gray;
 }
 
 .score_int, .time_date{
-    font-size: 24px;
+    font-size: clamp(4px, 3vw,20px);
     font-family: 'DM Sans', sans-serif;
     text-align: center;
     color: black;
