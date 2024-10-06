@@ -2,8 +2,6 @@ import './modalWindow_Square.css'
 
 const ModalWindow_Square = (props) => {
     const { active, setActive } = props;
-    console.log(active);
-    console.log(setActive);
     return (
         <div className={active ? 'modal_dark active' : 'modal_dark'}>
             <div className="modal_window_square">

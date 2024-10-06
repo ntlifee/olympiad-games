@@ -9,12 +9,12 @@
 } */
 
 .title-home{
-    font-size: 150px;
+    font-size: clamp(75px,10vw,150px);
     font-weight: 500;
 }
 
 .description-home{
-    font-size: 25px;
+    font-size: clamp(10px,2vw,25px);
     border-bottom: 2px solid orange;
     border-top: 2px solid orange;
     font-weight: 500;

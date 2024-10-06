@@ -22,8 +22,8 @@ const SquareGame = (props) => {
             <div className="container">
                 <div className={classes.wrapper}>
                     <GameInformationPanel />
+                    <ModalWindow_Square active={modalActive} setActive={setModalActive} />
                     <table className={classes.table_square}>
-                        <ModalWindow_Square active={modalActive} setActive={setModalActive} />
                         <thead>
                             <tr className={classes.tr_square}>
                                 <th className={classes.th_square}>Тема</th>

@@ -3,6 +3,7 @@
 	background-color: var(--nav-bg);
 	color: var(--nav-text);
 	letter-spacing: normal;
+	position: relative;
 }
 
 .nav-row {
@@ -14,12 +15,19 @@
 	flex-wrap: wrap;
 }
 
-.logo {
+.logo_left {
 	margin-right: auto;
-	color: var(--nav-text);
-	font-size: 24px;
-	font-family: 'Poppins', sans-serif;
-	font-weight: 700;
+}
+
+.logo_center {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	width: 70px;
+	
 }
 
 .nav-list {
