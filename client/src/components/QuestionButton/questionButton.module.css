@@ -51,3 +51,10 @@
     opacity: 1;
     animation: animate 8s linear infinite;
 }
+
+.question_button.green{
+    background: rgb(68, 255, 0);
+}
+.question_button.red{
+    background: rgb(255, 0, 0);
+}
